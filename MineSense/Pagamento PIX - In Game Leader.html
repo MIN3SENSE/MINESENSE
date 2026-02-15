@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://ingameleader.com.br/pagamento.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX - In Game Leader</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ingameleader.com.br/img/trophy.png">
+    <link href="./Pagamento PIX - In Game Leader_files/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Pagamento PIX - In Game Leader_files/styles.css">
+    <style>
+        .pix-container {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 40px;
+            background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 0px;
+        }
+
+        .pix-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pix-header h1 {
+            font-size: 28px;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .pix-header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .pix-info {
+            background: #fff;
+            padding: 20px;
+            border-left: 4px solid #ffe600;
+            margin-bottom: 30px;
+        }
+
+        .pix-info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .pix-info-item span:first-child {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .pix-info-item span:last-child {
+            color: #111;
+            font-weight: 700;
+        }
+
+        .pix-qrcode {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .pix-qrcode img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border: 3px solid #ffe600;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .pix-copiacola {
+            margin: 30px 0;
+        }
+
+        .pix-copiacola label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #111;
+            font-size: 14px;
+        }
+
+        .pix-copiacola-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pix-copiacola-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 0px;
+            font-family: monospace;
+            font-size: 12px;
+            background: #f9f9f9;
+        }
+
+        .pix-copiacola-input button {
+            padding: 12px 25px;
+            background-color: #ffe600;
+            color: #111;
+            font-weight: 700;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .pix-copiacola-input button:hover {
+            background-color: #fff16f;
+        }
+
+        .pix-timer {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .pix-timer p {
+            margin: 0;
+            color: #856404;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .pix-timer span {
+            font-size: 20px;
+            color: #111;
+        }
+
+        .pix-instrucoes {
+            margin-top: 30px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 0px;
+        }
+
+        .pix-instrucoes h3 {
+            margin-bottom: 15px;
+            color: #111;
+            font-size: 18px;
+        }
+
+        .pix-instrucoes ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .pix-instrucoes li {
+            margin-bottom: 10px;
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .pix-status {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+        }
+
+        .pix-status p {
+            margin: 0;
+            color: #0d47a1;
+            font-weight: 600;
+        }
+
+        .pix-status.sucesso {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+
+        .pix-status.sucesso p {
+            color: #155724;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .pix-container {
+                margin: 20px;
+                padding: 25px 20px;
+            }
+
+            .pix-header h1 {
+                font-size: 22px;
+            }
+
+            .pix-qrcode img {
+                max-width: 250px;
+            }
+
+            .pix-copiacola-input {
+                flex-direction: column;
+            }
+
+            .pix-copiacola-input button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <nav class="menu-esquerda">
+                <ul>
+                    <li><a href="https://ingameleader.com.br/index.html">Início</a></li>
+                    <li><a href="https://ingameleader.com.br/index.html#comprar">Comprar</a></li>
+                </ul>
+            </nav>
+
+            <div class="logo-central">
+                <img id="logo" src="./Pagamento PIX - In Game Leader_files/logoigl.png" alt="Logo">
+            </div>
+
+            <nav class="menu-direita">
+                <ul>
+                    <li><a href="https://ingameleader.com.br/termos/termos.html">Termos</a></li>
+                    <li><a href="https://ingameleader.com.br/index.html#suporte">Suporte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container do PIX -->
+    <div class="pix-container">
+        <div class="pix-header">
+            <h1>✅ Pedido Criado com Sucesso!</h1>
+            <p>Escaneie o QR Code ou copie o código PIX para finalizar o pagamento</p>
+        </div>
+
+        <!-- Informações do Pedido -->
+        <div class="pix-info">
+            <div class="pix-info-item">
+                <span>Produto:</span>
+                <span id="info-produto">KEY DE MINECRAFT</span>
+            </div>
+            <div class="pix-info-item">
+                <span>Valor:</span>
+                <span id="info-valor">R$ 25.00</span>
+            </div>
+            <div class="pix-info-item">
+                <span>Pedido:</span>
+                <span id="info-pedido">7aff15e3-74fc-4513-991c-ae1f3fb6c352</span>
+            </div>
+        </div>
+
+        <!-- QR Code -->
+        <div class="pix-qrcode">
+            <img id="qrcode-image" src="./Pagamento PIX - In Game Leader_files/saved_resource" alt="QR Code PIX" style="display: block;">
+            <p id="qrcode-loading" style="display: none;">Gerando QR Code...</p>
+        </div>
+
+        <!-- Código Copia e Cola -->
+        <div class="pix-copiacola">
+            <label>💳 Código PIX (Copia e Cola):</label>
+            <div class="pix-copiacola-input">
+                <input type="text" id="pix-code" readonly="" value="Carregando...">
+                <button onclick="copiarCodigo()">COPIAR</button>
+            </div>
+        </div>
+
+        <!-- Timer de Expiração -->
+        <div class="pix-timer">
+            <p>⏱️ Tempo restante para pagamento: <span id="timer">15:46</span></p>
+        </div>
+
+        <!-- Instruções -->
+        <div class="pix-instrucoes">
+            <h3>📋 Como pagar:</h3>
+            <ol>
+                <li>Abra o app do seu banco</li>
+                <li>Entre na opção <strong>PIX Copia e Cola</strong> ou <strong>Ler QR Code</strong></li>
+                <li>Escaneie o QR Code acima ou cole o código copiado</li>
+                <li>Confirme os dados e finalize o pagamento</li>
+                <li>Pronto! Você receberá seu produto por e-mail em instantes</li>
+            </ol>
+        </div>
+
+        <!-- Status -->
+        <div class="pix-status" id="status-pagamento">
+            <p>🔍 Aguardando pagamento...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            Todos os Direitos Reservados - ingameleader.com.br
+        </div>
+    </footer>
+
+    <script src="./Pagamento PIX - In Game Leader_files/config.js.baixados"></script>
+    <script src="./Pagamento PIX - In Game Leader_files/pagamento.js.baixados"></script>
+
+
+</body></html>

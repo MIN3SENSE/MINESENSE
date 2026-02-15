@@ -1,0 +1,119 @@
+// === CONFIGURAÇÃO ===
+// API_URL é carregada do config.js
+
+// === CARREGAR DADOS AO ABRIR PÁGINA ===
+window.addEventListener('DOMContentLoaded', () => {
+    const dados = sessionStorage.getItem('pagamentoPix');
+
+    if (!dados) {
+        alert('Dados do pagamento não encontrados. Redirecionando...');
+        window.location.href = 'index.html';
+        return;
+    }
+
+    const pix = JSON.parse(dados);
+
+    // Preencher informações
+    document.getElementById('info-produto').textContent = pix.produto || 'Produto';
+    document.getElementById('info-valor').textContent = `R$ ${pix.valorBRL || '0,00'}`;
+    document.getElementById('info-pedido').textContent = pix.pedidoId || '-';
+
+    // Exibir QR Code
+    if (pix.qrcodeUrl) {
+        // Gerar QR Code a partir do código PIX
+        const qrcodeImage = document.getElementById('qrcode-image');
+        qrcodeImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(pix.pixCopiaECola)}`;
+        qrcodeImage.style.display = 'block';
+        document.getElementById('qrcode-loading').style.display = 'none';
+    }
+
+    // Preencher código copia e cola
+    document.getElementById('pix-code').value = pix.pixCopiaECola || '';
+
+    // Iniciar timer
+    iniciarTimer(pix.expirationDate);
+
+    // Iniciar verificação de pagamento
+    verificarPagamento(pix.pedidoId);
+});
+
+// === COPIAR CÓDIGO PIX ===
+function copiarCodigo() {
+    const input = document.getElementById('pix-code');
+    input.select();
+    input.setSelectionRange(0, 99999); // Mobile
+
+    try {
+        document.execCommand('copy');
+        const btn = event.target;
+        const textoOriginal = btn.textContent;
+        btn.textContent = '✓ COPIADO!';
+        btn.style.backgroundColor = '#28a745';
+
+        setTimeout(() => {
+            btn.textContent = textoOriginal;
+            btn.style.backgroundColor = '#ffe600';
+        }, 2000);
+    } catch (err) {
+        alert('Erro ao copiar. Tente selecionar e copiar manualmente.');
+    }
+}
+
+// === TIMER DE EXPIRAÇÃO ===
+function iniciarTimer(expirationDate) {
+    if (!expirationDate) return;
+
+    const expiracao = new Date(expirationDate).getTime();
+
+    const interval = setInterval(() => {
+        const agora = new Date().getTime();
+        const diferenca = expiracao - agora;
+
+        if (diferenca <= 0) {
+            clearInterval(interval);
+            document.getElementById('timer').textContent = '00:00';
+            document.getElementById('status-pagamento').innerHTML = '<p>⏱️ Tempo expirado. Faça um novo pedido.</p>';
+            return;
+        }
+
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+        document.getElementById('timer').textContent =
+            `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+    }, 1000);
+}
+
+// === VERIFICAR STATUS DO PAGAMENTO ===
+let verificacaoInterval;
+
+function verificarPagamento(pedidoId) {
+    verificacaoInterval = setInterval(async () => {
+        try {
+            const res = await fetch(`${API_URL}/pedido/${pedidoId}`);
+            const pedido = await res.json();
+
+            if (pedido.status === 'pago' || pedido.statusGateway === 'paid') {
+                clearInterval(verificacaoInterval);
+
+                const statusDiv = document.getElementById('status-pagamento');
+                statusDiv.className = 'pix-status sucesso';
+                statusDiv.innerHTML = '<p>✅ Pagamento confirmado! Redirecionando...</p>';
+
+                // Redirecionar para página de obrigado
+                setTimeout(() => {
+                    window.location.href = 'obrigado.html';
+                }, 2000);
+            }
+        } catch (error) {
+            console.error('Erro ao verificar pagamento:', error);
+        }
+    }, 5000); // Verifica a cada 5 segundos
+}
+
+// Limpar intervalo ao sair da página
+window.addEventListener('beforeunload', () => {
+    if (verificacaoInterval) {
+        clearInterval(verificacaoInterval);
+    }
+});
