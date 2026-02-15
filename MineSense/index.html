@@ -1,0 +1,830 @@
+<!DOCTYPE html><html lang="pt-BR"><head><link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="images/trophy.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Game Leader - Melhor Loja de Minecraft</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!-- CSS do AOS -->
+<link href="css/aos.css" rel="stylesheet">
+
+
+
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBHET8E4GJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KBHET8E4GJ');
+  </script>
+
+  <script>
+    const swiper = new Swiper('.slider-page__slider', {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+      centeredSlides: true,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Responsivo
+      breakpoints: {
+        768: {
+          slidesPerView: 2.5
+        },
+        1024: {
+          slidesPerView: 3.5
+        }
+      }
+    });
+  </script>
+
+
+  <script src="js/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".info-card"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const logo = document.getElementById('logo');
+      if (window.scrollY > 50) {
+        logo.classList.add('logo-small');
+      } else {
+        logo.classList.remove('logo-small');
+      }
+    });
+  </script>
+
+  <!-- Script para movimentação da logo -->
+
+</head><body id="topo">
+
+  <header>
+    <div class="header-wrapper">
+      <nav class="menu-esquerda">
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#comprar">Comprar</a></li>
+        </ul>
+      </nav>
+
+      <div class="logo-central">
+        <span id="logo" class="logo-text">MINESENSE</span>
+      </div>
+
+      <nav class="menu-direita">
+        <ul>
+          <li><a href="termos/termos.html">Termos</a></li>
+          <li><a href="#suporte">Suporte</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="images/vape_dark.png" class="active" alt="Banner 1">
+  </section>
+
+  <!-- Mini Header Unificado -->
+  <div class="mini-header-unificado">
+    <div class="info-unico">
+      <img src="images/enviorapido.png" alt="Envio" class="icon">
+      <div>
+        <h4>Envio Rápido</h4>
+        <p>Entrega rápida através do e-mail.</p>
+      </div>
+    </div>
+
+    <div class="info-unico">
+      <img src="images/compraseguraicon.png" alt="Segurança" class="icon">
+      <div>
+        <h4>Compra Segura</h4>
+        <p>Compra protegidas e criptografadas</p>
+      </div>
+    </div>
+
+    <div class="info-unico">
+      <img src="images/suporte.png" alt="Suporte" class="icon">
+      <div>
+        <h4>Suporte Real</h4>
+        <p>Atendimento rápido via Discord ou e-mail.</p>
+      </div>
+    </div>
+
+    <div class="info-unico">
+      <img src="images/qualidade.png" alt="Oficial" class="icon">
+      <div>
+        <h4>Licença Oficial</h4>
+        <p>Produtos originais e confiáveis.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Imagem de destaque -->
+  <section class="imagem-destaque" style="background-color: #2b2b2b00; padding: 20px; text-align: center;">
+    <img id="imagem-editavel" src="images/bemvindo.png" alt="Imagem Destaque" style="max-width: 20%; cursor: pointer;">
+  </section>
+
+  <!-- ===== NOVO PRODUTO INTEGRADO AQUI ===== -->
+
+  <section id="comprar">
+    <!-- ===== NOVO LAYOUT COM IMAGEM E TEXTO LADO A LADO ===== -->
+    <div class="produtos-container">
+
+      <!-- Produto 1 -->
+      <div class="produto-destaque1" data-aos="fade-up">
+        <div class="quadrado-imagem1">
+          <img src="images/keyminecraft.png" alt="Produto Minecraft">
+        </div>
+        <div class="quadrado-conteudo1">
+          <h1>MINECRAFT NFA</h1>
+          <div class="promo1">PRODUTO EM PROMOÇÃO</div>
+          <p class="descricao1">Conta original com acesso total e suporte.</p>
+          <ul class="caracteristicas1">
+            <li>• PODE TROCAR E-MAIL E SENHA</li>
+            <li>• VERSÃO JAVA E BEDROCK</li>
+            <li>• PODE TROCAR NICK E SKIN</li>
+            <li>• ACESSO A TODOS SERVIDORES ORIGINAIS</li>
+            <li>• ATIVADO DIRETO NO SEU E-MAIL</li>
+            <li>• LIMITADO</li>
+          </ul>
+          <p class="preco-antigo1">DE R$59,90 POR:</p>
+          <p class="preco-final1">
+            <span class="simbolo1">R$</span>
+            <span class="valor1">10</span>
+            <span class="centavos1">,00</span>
+          </p>
+          <button class="botao-comprar1" data-nome="MINECRAFT NFA" data-preco="10.00" data-imagem="img/keyminecraft.png">
+            COMPRAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto-destaque2" data-aos="fade-up">
+        <div class="quadrado-imagem2">
+          <img src="images/mine2full.png" alt="Produto Minecraft 2">
+        </div>
+        <div class="quadrado-conteudo2">
+          <h2>MINECRAFT ORIGINAL</h2>
+          <div class="promo2">PRODUTO EM PROMOÇÃO</div>
+          <p class="descricao2">Versão com suporte premium e acesso antecipado.</p>
+          <ul class="caracteristicas2">
+            <li>• PODE TROCAR E-MAIL E SENHA</li>
+            <li>• VERSÃO JAVA E BEDROCK</li>
+            <li>• PODE TROCAR NICK E SKIN</li>
+            <li>• ACESSO A TODOS SERVIDORES ORIGINAIS</li>
+            <li>• ATIVADO DIRETO NO SEU E-MAIL</li>
+            <li>• ILIMITADO</li>
+          </ul>
+          <p class="preco-antigo2">DE R$159,90 POR:</p>
+          <p class="preco-final2">
+            <span class="simbolo2">R$</span>
+            <span class="valor2">65</span>
+            <span class="centavos2">,00</span>
+          </p>
+          <button class="botao-comprar2" data-nome="MINECRAFT FULL" data-preco="65.00" data-imagem="img/mine2full.png">
+            COMPRAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto-destaque3" data-aos="fade-up">
+        <div class="quadrado-imagem3">
+          <img src="images/capaoptifine.png" alt="Produto Minecraft 2">
+        </div>
+        <div class="quadrado-conteudo3">
+          <h3>Spoffer Universal</h3>
+          <div class="promo3">PRODUTO EM PROMOÇÃO</div>
+          <p class="descricao3">UNBAN GARANTIDO</p>
+          <ul class="caracteristicas2">
+            <li>• TODOS OS JOGOS</li>
+            <li>• PODE USAR QUANTAS VEZ QUISER O UNBAN</li>
+            <li>• ENVIADO DIRETO NO SEU DISCORD</li>
+            <li>• ILIMATADO</li>
+          </ul>
+          <p class="preco-antigo3">DE R$59,90 POR:</p>
+          <p class="preco-final3">
+            <span class="simbolo3">R$</span>
+            <span class="valor3">20</span>
+            <span class="centavos3">,00</span>
+          </p>
+          <button class="botao-comprar3" data-nome="Spoffer Universal" data-preco="20.00" data-imagem="img/capaoptifine.png">
+            COMPRAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto-destaque4" data-aos="fade-up">
+        <div class="quadrado-imagem4">
+          <img src="images/bryon.png" alt="Produto Minecraft 2">
+        </div>
+        <div class="quadrado-conteudo4">
+          <h4>SLINKY</h4>
+          <div class="promo4">WIN GARANTIDA</div>
+          <p class="descricao4">Versão com suporte premium e acesso antecipado.</p>
+          <ul class="caracteristicas4">
+            <li>• SISTEMA DE KEY EXCLUSIVA</li>
+            <li>• COMPÁTIVEL DA 1.7X ATÉ 1.8X</li>
+            <li>• COMPÁTIVEL COM TODOS CLIENTS</li>
+            <li>• ENVIADO DIRETO NO SEU DISCORD</li>
+            <li>• ENTREGA RÁPIDA E FACILITADA</li>
+            <li>• TOTALMENTE INDETECTÁVEL</li>
+          </ul>
+          <p class="preco-antigo4">DE R$244,99 POR:</p>
+          <p class="preco-final4">
+            <span class="simbolo4">R$</span>
+            <span class="valor4">45</span>
+            <span class="centavos4">,00</span>
+          </p>
+          <button class="botao-comprar4" data-nome="SLINKY" data-preco="45.00" data-imagem="img/bryon.png">
+            COMPRAR
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="containerbutton">
+    <button class="vermais" onclick="window.location.href='/produtos'">
+      VER TODOS PRODUTOS
+    </button>
+  </div>
+
+  <hr class="linha-customizada">
+
+
+  <!--ABA PARCEIROS-->
+  <section class="parceiros">
+    <h2 class="titulo-parceiros">PARCEIROS - IN GAME LEADER</h2>
+    <p class="descricao-parceiros">
+      Conheça os criadores de conteúdo que divulgam nossa loja e apoiam nosso projeto.
+    </p>
+
+    <!-- CONTÊINER FLEX ÚNICO -->
+    <div class="parceiros-container">
+    </div>
+  </section>
+  <hr class="linha-customizada">
+
+  <section id="suporte">
+
+    <!-- BLOCO DO SUPORTE -->
+    <section class="bloco-suporte">
+      <div class="suporte-imagem">
+        <img src="images/suporpigman.png" alt="Atendente Minecraft">
+      </div>
+      <div class="suporte-conteudo">
+        <p class="suporte-descricao">
+          Todas as contas possuem <strong>30 dias de suporte completo e assistência</strong> após entrega pela nossa
+          <strong>equipe especializada</strong>, ajudando você a começar o jogo <strong>sem problemas</strong> e se
+          manter atualizado das novidades.
+        </p>
+
+        <a href="https://discord.gg/RePjmcgu" target="_blank" rel="noopener noreferrer" class="suporte-link">
+          <!-- classe opcional p/ tirar sublinhado -->
+
+          <!-- TODAS as classes internas permanecem iguais -->
+          <div class="suporte-opcao">
+            <img src="images/2111370.png" alt="Discord" class="icone">
+            <span>Suporte pelo: <strong>DISCORD</strong></span>
+          </div>
+        </a>
+
+        <div class="suporte-horario">
+          <img src="images/61112.png" alt="Relógio" class="icone">
+          <span>Horários de atendimento Brasil das <strong>10:00</strong> às <strong>20:00</strong> de
+            <strong>Seg-Sex</strong> (Brasília)</span>
+        </div>
+      </div>
+    </section>
+
+  </section>
+  <!-- FINAL DO BLOCO SUPORTE -->
+
+  <div class="texto-aviso">
+    <p>
+      Todas as entregas da <strong>ingameleader.com.br</strong> são feitas por e-mail. O suporte é exclusivo para
+      compras feitas diretamente no site.
+    </p>
+    <p>
+      Evite comprar contas de terceiros, pois isso pode causar bloqueios ou perda de acesso ao jogo.
+    </p>
+    <p>
+      Verifique se os dados da compra estão corretos. Caso necessário, nossa equipe resolve qualquer problema em até
+      <strong>24 horas</strong>.
+    </p>
+    <p>
+      A <strong>ingameleader.com.br</strong> não faz promoções ou parcerias em outros sites. Todas as ofertas são
+      exclusivas no nosso site oficial.
+    </p>
+  </div>
+
+  <footer>
+    <div>
+      Todos os Direitos Reservados - ingameleader.com.br
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+
+  <!-- JS do AOS -->
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <div class="produto-destaque vertical" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+    <!-- conteúdo -->
+  </div>
+
+  <script>
+    window.onload = function () {
+      const canvas = document.getElementById('snow-canvas');
+      const ctx = canvas.getContext('2d');
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+
+      const flakes = [];
+
+      for (let i = 0; i < 100; i++) {
+        flakes.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 3 + 1,
+          d: Math.random() + 1
+        });
+      }
+
+      function drawSnow() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        for (let i = 0; i < flakes.length; i++) {
+          let f = flakes[i];
+          ctx.moveTo(f.x, f.y);
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+        }
+        ctx.fill();
+        moveSnow();
+      }
+
+      let angle = 0;
+      function moveSnow() {
+        angle += 0.01;
+        for (let i = 0; i < flakes.length; i++) {
+          let f = flakes[i];
+          f.y += Math.pow(f.d, 2) + 1;
+          f.x += Math.sin(angle) * 2;
+
+          if (f.y > height) {
+            flakes[i] = { x: Math.random() * width, y: 0, r: f.r, d: f.d };
+          }
+        }
+      }
+
+      setInterval(drawSnow, 30);
+
+      window.addEventListener('resize', () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      });
+    }
+  </script>
+
+  <canvas id="snow-canvas"></canvas>
+
+  <!-- Integração do Botão Comprar/Checkout -->
+  <!-- MODAL DE VALIDAÇÃO -->
+  <!-- MODAL -->
+  <div id="modal-dados">
+
+    <form id="form-dados">
+
+      <h3>FINALIZAR COMPRA</h3>
+
+      <p class="desc">
+        Dados necessários para que seu produto chegue até você!
+      </p>
+
+      <!-- GRID -->
+      <div class="modal-grid">
+
+        <!-- COLUNA ESQUERDA — CHECKOUT -->
+        <div class="modal-col-checkout">
+
+          <div class="checkout-resumo">
+
+            <h4 class="checkout-titulo">Você pagará</h4>
+
+            <p class="checkout-total">
+              R$ <span id="total-final">0.00</span>
+            </p>
+
+            <!-- PRODUTO -->
+            <div class="checkout-produto">
+              <img id="checkout-imagem" alt="Produto">
+
+              <div class="checkout-produto-info">
+                <p id="checkout-nome"></p>
+                <span class="checkout-preco">
+                  R$ <span id="checkout-preco">0.00</span>
+                </span>
+              </div>
+
+              <div class="checkout-qtd">
+                <button type="button" id="menos">−</button>
+                <span id="quantidade">1</span>
+                <button type="button" id="mais">+</button>
+              </div>
+            </div>
+
+            <hr>
+
+            <!-- VALORES -->
+            <div class="checkout-valores">
+              <div>
+                <span>Subtotal</span>
+                <span>R$ <span id="subtotal">0.00</span></span>
+              </div>
+
+              <div>
+                <span>Desconto no Pix</span>
+                <span class="desconto-pix">
+                  <span id="pix-percent">0%</span>
+                  -R$ <span id="pix-desconto">0.00</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- CUPOM -->
+            <div class="checkout-cupom">
+              <span id="mostrar-cupom" class="link-cupom">
+                Adicionar cupom
+              </span>
+
+              <div class="cupom-area oculto">
+                <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+                <button type="button" id="aplicar-cupom">Aplicar</button>
+              </div>
+
+              <div id="cupom-aplicado"></div>
+            </div>
+
+            <hr>
+
+            <!-- TOTAL -->
+            <div class="checkout-total-final">
+              <strong>Total</strong>
+              <strong>R$ <span id="total-pagar">0.00</span></strong>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA — DADOS -->
+        <div class="modal-col-dados">
+
+          <input type="text" name="nome" placeholder="Digite seu nome" required="" autofocus="">
+          <input type="email" name="email" placeholder="Digite seu e-mail" required="">
+          <input type="text" name="discord" placeholder="Digite seu Discord (ex: user#0000)" required="">
+
+          <label class="termos">
+            <input type="checkbox" required="">
+            <span class="check-custom"></span>
+            Li e aceito os
+            <a href="termos/termos.html" target="_blank">
+              Termos de Uso
+            </a>
+          </label>
+          <div class="seguranca-checkout">
+
+            <div class="seguranca-titulo">
+              <span class="icon-seguro">🛡️</span>
+              <strong>Seus dados são usados de forma segura para garantir sua satisfação:</strong>
+            </div>
+
+            <ul class="seguranca-lista">
+              <li>
+                <span class="icon-ok">✔</span>
+                Gerar o seu comprovante de compra e pagamento;
+              </li>
+              <li>
+                <span class="icon-ok">✔</span>
+                Direito a garantia de devolução;
+              </li>
+              <li>
+                <span class="icon-ok">✔</span>
+                Acompanhar o andamento do seu pedido
+              </li>
+            </ul>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <!-- AÇÕES -->
+      <div class="modal-acoes">
+        <input type="hidden" name="produto">
+        <input type="hidden" name="preco">
+
+        <button type="submit" class="enviar">IR PARA PAGAMENTO</button>
+        <button type="button" class="cancelar" onclick="fecharModal()">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+
+
+  <script>
+    let quantidade = 1;
+
+    const atualizarValores = () => {
+      const subtotal = precoOriginal * quantidade;
+
+      let descontoPix = 0;
+      let pixPercent = 0;
+
+      // Só aplica desconto no Pix se houver cupom ativo
+      if (cupomAtivo) {
+        pixPercent = cupons[cupomAtivo] || 0;
+        descontoPix = subtotal * (pixPercent / 100);
+      }
+
+      const total = subtotal - descontoPix;
+
+      document.getElementById('subtotal').innerText =
+        subtotal.toFixed(2);
+
+      document.getElementById('pix-percent').innerText =
+        `${pixPercent}%`;
+
+      document.getElementById('pix-desconto').innerText =
+        descontoPix.toFixed(2);
+
+      document.getElementById('total-pagar').innerText =
+        total.toFixed(2);
+
+      document.getElementById('total-final').innerText =
+        total.toFixed(2);
+
+      // atualiza o input hidden usado no pagamento
+      document.querySelector('input[name="preco"]').value =
+        total.toFixed(2);
+    };
+  </script>
+
+
+  <!--nao mexer kkk-->
+
+  <script>
+    let precoOriginal = 0;
+    let cupomAtivo = null;
+
+    const cupons = {
+      DESCONTO10: 10,
+      N0OP10: 10,
+      DG10: 10,
+      BROKEN10: 10,
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const modal = document.getElementById('modal-dados');
+      const form = document.getElementById('form-dados');
+
+      function abrirModal(botao) {
+        modal.classList.add('ativo');
+
+        precoOriginal = parseFloat(
+          botao.dataset.preco.replace(',', '.')
+        );
+
+        const btnMostrarCupom = document.getElementById('mostrar-cupom');
+        const areaCupom = document.querySelector('.cupom-area');
+
+        btnMostrarCupom.addEventListener('click', () => {
+          areaCupom.classList.toggle('oculto');
+        });
+
+
+        quantidade = 1;
+        cupomAtivo = null;
+
+        document.getElementById('checkout-nome').innerText =
+          botao.dataset.nome;
+
+        document.getElementById('checkout-imagem').src =
+          botao.dataset.imagem;
+
+        document.getElementById('checkout-preco').innerText =
+          precoOriginal.toFixed(2);
+
+        document.getElementById('quantidade').innerText = 1;
+
+        document.getElementById('cupom-input').value = '';
+        document.getElementById('cupom-aplicado').innerText = '';
+
+        document.querySelector('input[name="produto"]').value =
+          botao.dataset.nome;
+
+        atualizarValores(); // ✅ ESSENCIAL
+      }
+
+      window.fecharModal = () => {
+        modal.classList.remove('ativo');
+      };
+
+      document.querySelectorAll('[class^="botao-comprar"]').forEach(botao => {
+        botao.addEventListener('click', () => abrirModal(botao));
+      });
+
+      document.getElementById('aplicar-cupom').addEventListener('click', () => {
+        const input = document.getElementById('cupom-input');
+        const cupom = input.value.trim().toUpperCase();
+
+        if (!cupons[cupom]) {
+          alert('Cupom inválido');
+          return;
+        }
+
+        if (cupomAtivo) {
+          alert('Você já aplicou um cupom');
+          return;
+        }
+
+        const percentual = cupons[cupom];
+        document.getElementById('cupom-aplicado').innerText =
+          `Cupom aplicado: ${cupom} (-${percentual}%)`;
+
+        cupomAtivo = cupom;
+        atualizarValores();
+
+      });
+
+    });
+
+
+    document.getElementById('mais').addEventListener('click', () => {
+      quantidade++;
+      document.getElementById('quantidade').innerText = quantidade;
+      atualizarValores();
+    });
+
+    document.getElementById('menos').addEventListener('click', () => {
+      if (quantidade > 1) {
+        quantidade--;
+        document.getElementById('quantidade').innerText = quantidade;
+        atualizarValores();
+      }
+    });
+
+  </script>
+
+
+
+  <!-- topo da página -->
+
+  <!-- …conteúdo… -->
+
+  <a href="#" class="btn-topo" id="voltarTopo">▲</a>
+
+  <script>
+    document.getElementById('voltarTopo').addEventListener('click', (e) => {
+      e.preventDefault();            // evita salto instantâneo
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- BLOCK DO F12 -->
+
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      // F12
+      if (e.keyCode === 123) {
+        e.preventDefault();
+      }
+
+      // Ctrl + Shift + I / J / C
+      if (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) {
+        e.preventDefault();
+      }
+
+      // Ctrl + U
+      if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <!-- ENVIAR PRO BACKEND -->
+
+  <script>
+    document.getElementById('form-dados').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // ✅ pega exatamente o que está sendo exibido no modal
+      const produtoModal = document.getElementById('checkout-nome').innerText.trim();
+      const precoFinalModal = document.getElementById('total-pagar').innerText.trim(); // ex: "97.00"
+      const discordUser = document.querySelector('input[name="discord"]').value;
+
+      const dados = {
+        produto: produtoModal,
+        preco: precoFinalModal,
+
+        nome: document.querySelector('input[name="nome"]').value,
+        email: document.querySelector('input[name="email"]').value,
+        discord: discordUser,
+
+        cupom: cupomAtivo || null
+      };
+
+      // Salvar Discord para usar na página de obrigado
+      sessionStorage.setItem('userDiscord', discordUser);
+
+      enviarParaBackend(dados);
+    });
+  </script>
+
+  <script src="js/config.js"></script>
+  <script>
+    async function enviarParaBackend(dados) {
+      console.log("Enviando para:", API_URL + "/criar-pedido");
+
+      try {
+        const res = await fetch(API_URL + "/criar-pedido", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados)
+        });
+
+        const resposta = await res.json();
+
+        if (!res.ok) {
+          alert(resposta.erro || "Erro ao criar pedido");
+          return;
+        }
+
+        // ✅ ARMAZENAR DADOS DO PIX NO SESSIONSTORAGE
+        const dadosPix = {
+          pedidoId: resposta.pedidoId,
+          produto: resposta.produto || dados.produto,
+          valorBRL: resposta.valorBRL,
+          qrcodeUrl: resposta.qrcodeUrl,
+          pixCopiaECola: resposta.pixCopiaECola,
+          expirationDate: resposta.expirationDate
+        };
+
+        sessionStorage.setItem('pagamentoPix', JSON.stringify(dadosPix));
+
+        // ✅ REDIRECIONAR PARA A PÁGINA DE PAGAMENTO
+        window.location.href = 'pagamento.html';
+        return;
+
+      } catch (err) {
+        console.error(err);
+        alert("Falha ao conectar no backend");
+      }
+    }
+  </script>
+
+
+
+
+</body></html>
